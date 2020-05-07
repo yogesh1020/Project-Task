@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yogesh bhojani\\source\\repos\\ProjectTask\\ProjectTask.csproj": {}
+    "D:\\New folder\\Project-Task\\ProjectTaskApi\\ProjectTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yogesh bhojani\\source\\repos\\ProjectTask\\ProjectTask.csproj": {
+    "D:\\New folder\\Project-Task\\ProjectTaskApi\\ProjectTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yogesh bhojani\\source\\repos\\ProjectTask\\ProjectTask.csproj",
+        "projectUniqueName": "D:\\New folder\\Project-Task\\ProjectTaskApi\\ProjectTask.csproj",
         "projectName": "ProjectTask",
-        "projectPath": "C:\\Users\\yogesh bhojani\\source\\repos\\ProjectTask\\ProjectTask.csproj",
+        "projectPath": "D:\\New folder\\Project-Task\\ProjectTaskApi\\ProjectTask.csproj",
         "packagesPath": "C:\\Users\\yogesh bhojani\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yogesh bhojani\\source\\repos\\ProjectTask\\obj\\",
+        "outputPath": "D:\\New folder\\Project-Task\\ProjectTaskApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yogesh bhojani\\AppData\\Roaming\\NuGet\\NuGet.Config",

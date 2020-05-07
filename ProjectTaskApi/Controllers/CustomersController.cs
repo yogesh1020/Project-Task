@@ -14,6 +14,7 @@ namespace ProjectTask.Controllers
     public class CustomersController : ControllerBase
     {
         private readonly ProjectTaskDbContext _context;
+        Customers customers = new Customers();
 
         public CustomersController(ProjectTaskDbContext context)
         {
@@ -29,16 +30,19 @@ namespace ProjectTask.Controllers
 
         // GET: api/Customers/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Customers>> GetCustomers(int id)
+        
+        public async Task<ActionResult<Customers>> GetCustomers(Customers customers)
         {
-            var customers = await _context.Customers.FindAsync(id);
-
-            if (customers == null)
+           // var customers = await _context.Customers.FindAsync(id);
+            var check = await _context.Customers.SingleOrDefaultAsync(t => t.Email == customers.Email && t.Password == customers.Password);
+            if (check == null)
             {
                 return NotFound();
             }
-
-            return customers;
+            else
+            {
+                return check;
+            }       
         }
 
         // PUT: api/Customers/5
@@ -78,7 +82,7 @@ namespace ProjectTask.Controllers
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Customers>> PostCustomers(Customers customers)
-        {
+           {
             _context.Customers.Add(customers);
             await _context.SaveChangesAsync();
 

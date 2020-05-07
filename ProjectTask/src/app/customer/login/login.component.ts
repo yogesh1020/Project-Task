@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http'
+import { config } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 loginFormGroup : FormGroup;
-  constructor(private formBuilder:FormBuilder , private router:Router) { }
+  CustomerDate: any;
+  result:any;
+  rootURL: string = 'https://localhost:44310/api';
+  config: any;
+  constructor(private formBuilder:FormBuilder , private router:Router , private http :HttpClient) { }
 
   ngOnInit(): void {
     this.loginFormGroup = this.formBuilder.group({
@@ -24,9 +30,18 @@ loginFormGroup : FormGroup;
     }
     else
     {
-      this.router.navigateByUrl('profile');
+      const param = this.loginFormGroup.value
+      this.http.get(this.rootURL+'/Customers' , param).subscribe((res:any)=>this.result = res)
+      console.log(this.result);
       sessionStorage.setItem('token',this.loginFormGroup.controls.email.value)
+
     }
   }
+  
 
+}
+
+export interface Config{
+  userName:string;
+  password:string;
 }

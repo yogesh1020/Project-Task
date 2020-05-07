@@ -11,6 +11,9 @@ import { RegistrationComponent } from './customer/registration/registration.comp
 import { LoginComponent } from './customer/login/login.component';
 import { ProfileComponent } from './customer/profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EditComponent } from './customer/profile/edit/edit.component';
+import { AddComponent } from './product/add/add.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +22,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
     RegistrationComponent,
     LoginComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
