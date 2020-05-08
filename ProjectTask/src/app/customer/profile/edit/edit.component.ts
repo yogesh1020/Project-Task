@@ -21,8 +21,6 @@ editFormGroup:FormGroup
       firstName:['',Validators.required],
       lastName:['',Validators.required],
       email:['',Validators.required],
-      password:['',Validators.required],
-      confirmPassword:['',Validators.required],
       mobileNumber:['',Validators.required],
       gender:['',Validators.required],
       address:['',Validators.required],

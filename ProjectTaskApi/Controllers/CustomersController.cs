@@ -29,7 +29,7 @@ namespace ProjectTask.Controllers
         }
 
         // GET: api/Customers/5
-        [HttpGet("{id}")]
+        [HttpGet("{Email,Password}")]
         
         public async Task<ActionResult<Customers>> GetCustomers(Customers customers)
         {

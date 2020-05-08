@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EditComponent } from './customer/profile/edit/edit.component';
 import { AddComponent } from './product/add/add.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddComponent } from './product/add/add.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

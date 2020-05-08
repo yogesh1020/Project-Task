@@ -34,6 +34,7 @@ loginFormGroup : FormGroup;
       this.http.get(this.rootURL+'/Customers' , param).subscribe((res:any)=>this.result = res)
       console.log(this.result);
       sessionStorage.setItem('token',this.loginFormGroup.controls.email.value)
+      this.router.navigateByUrl('profile')
 
     }
   }

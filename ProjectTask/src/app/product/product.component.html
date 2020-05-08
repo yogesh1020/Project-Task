@@ -7,13 +7,13 @@
 <body>
     <p>List Of Product</p>
         <input type="text" [(ngModel)]="search" placeholder="search by product name & brand name">
-
+        <p>Add Product <button [routerLink]="['/add']">Add</button></p>
     <table class="table table-striped">
         <thead>
         <tr>
-          <th>Product Name</th>
-          <th>Product brand</th>
-          <th>price</th>
+          <th (click)="sort('productName')" >Product Name</th>
+          <th (click)="sort('brand')">Product brand</th>
+          <th (click)="sort('price')">price</th>
           <th>status</th>
         </tr>
         </thead>

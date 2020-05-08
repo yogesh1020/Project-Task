@@ -4,6 +4,8 @@ import { CustomerComponent } from './customer/customer.component';
 import { ProductComponent } from './product/product.component';
 import { LoginComponent } from './customer/login/login.component';
 import { ProfileComponent } from './customer/profile/profile.component';
+import { AddComponent } from './product/add/add.component';
+import { EditComponent } from './customer/profile/edit/edit.component';
 
 
 const routes: Routes = [
@@ -18,6 +20,12 @@ const routes: Routes = [
   },
   {
     path:'profile' , component:ProfileComponent
+  },
+  {
+    path:'add' , component:AddComponent
+  },
+  {
+    path:'edit' , component:EditComponent
   }
 ];
 

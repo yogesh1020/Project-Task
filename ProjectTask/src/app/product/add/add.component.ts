@@ -29,10 +29,10 @@ export class AddComponent implements OnInit {
       alert("validation required");
     }
    else{
-     this.http.post(this.rootURL+'/Products',{ProductName:this.addFormGroup.controls.firstName.value,
-      Brand:this.addFormGroup.controls.lastName.value,
-      Price:this.addFormGroup.controls.email.value,
-      Status:this.addFormGroup.controls.password.value
+     this.http.post(this.rootURL+'/Products',{ProductName:this.addFormGroup.controls.productName.value,
+      Brand:this.addFormGroup.controls.brand.value,
+      Price:this.addFormGroup.controls.price.value,
+      Status:this.addFormGroup.controls.status.value
     }).subscribe(res=>{this.result = res});
     console.log(this.result);
     console.log(this.addFormGroup.value)
