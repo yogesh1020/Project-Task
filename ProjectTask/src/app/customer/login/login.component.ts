@@ -31,7 +31,10 @@ loginFormGroup : FormGroup;
     else
     {
       const param = this.loginFormGroup.value
-      this.http.get(this.rootURL+'/Customers' , param).subscribe((res:any)=>this.result = res)
+      this.http.post(this.rootURL+'/Login' , {
+        "Email":this.loginFormGroup.value.email,
+        "Password":this.loginFormGroup.value.password
+      }).subscribe((res:any)=>this.result = res)
       console.log(this.result);
       sessionStorage.setItem('token',this.loginFormGroup.controls.email.value)
       this.router.navigateByUrl('profile')
@@ -40,9 +43,4 @@ loginFormGroup : FormGroup;
   }
   
 
-}
-
-export interface Config{
-  userName:string;
-  password:string;
 }

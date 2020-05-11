@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditComponent } from './customer/profile/edit/edit.component';
 import { AddComponent } from './product/add/add.component';
 import {Ng2SearchPipeModule} from 'ng2-search-filter'
+import {AgGridModule} from 'ag-grid-angular'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter'
     LoginComponent,
     ProfileComponent,
     EditComponent,
-    AddComponent
+    AddComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import {Ng2SearchPipeModule} from 'ng2-search-filter'
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]

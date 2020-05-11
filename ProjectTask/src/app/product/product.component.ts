@@ -18,27 +18,11 @@ export class ProductComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.http.get(this.rootURL+'/Product').subscribe((res:any)=>{
+    this.http.get(this.rootURL+'/Products').subscribe((res:any)=>{
       this.result = res
     })
 
   }
-  sort(property) {
-    this.isDesc = !this.isDesc;     
-    this.column = property;
-    let direction = this.isDesc ? 1 : -1;
-
-    this.records.sort(function (a, b) {
-      if (a[property] < b[property]) {
-        return -1 * direction;
-      }
-      else if (a[property] > b[property]) {
-        return 1 * direction;
-      }
-      else {
-        return 0;
-      }
-    });
-  };
+ 
 
 }

@@ -10,7 +10,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class RegistrationComponent implements OnInit {
 registrationFormGroup : FormGroup;
-  result: Object;
+  result: any;
   rootURL: string='https://localhost:44310/api';
   constructor(private formBuilder:FormBuilder , private router:Router , private http:HttpClient) { }
 public customer : any;

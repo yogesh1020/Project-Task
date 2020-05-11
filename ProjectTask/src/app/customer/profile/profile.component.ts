@@ -7,13 +7,16 @@ import {Subscription } from'rxjs'
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-subscription:Subscription;
+
+
 rootURL: string = 'https://localhost:44310/api';
+  result: any;
   constructor(public http:HttpClient) { }
 
   ngOnInit(): void {
-    this.subscription =  this.http.get(this.rootURL+'/Customers').subscribe();
-    console.log(this.subscription);
+    this.http.get(this.rootURL+'/Customers').subscribe((res:any)=>{
+      this.result = res
+    });
     
   }
 
